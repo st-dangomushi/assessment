@@ -26,7 +26,8 @@
         const header = document.createElement('h3');
         header.innerText = '診断結果';
         resultDivided.appendChild(header);
-  const paragraph = document.createElement('p');
+
+        const paragraph = document.createElement('p');
         const result = assessment(userName);
         paragraph.innerText = result;
         resultDivided.appendChild(paragraph);
@@ -72,8 +73,9 @@
     /**
     * 名前の文字列を渡すと診断結果を返す関数
     * @param {string} userName ユーザーの名前
-    * @return {string} 診断結果  
-    */ function assessment(userName) {
+    * @return {string} 診断結果
+    */
+    function assessment(userName) {
         // 全文字のコード番号を取得してそれを足し合わせる
         let sumOfcharCode = 0;
         for (let i = 0; i < userName.length; i++) {
